@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Poppins Black';
+    src: url('/fonts/Poppins/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('/fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraBold';
+    src: url('/fonts/Poppins/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraLight';
+    src: url('/fonts/Poppins/Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url('/fonts/Poppins/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url('/fonts/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('/fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('/fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Thin';
+    src: url('/fonts/Poppins/Poppins-Thin.ttf');
+}
+
+:root{
+        --cor-principal: rgb(105, 36, 253);
+        --cor-secundaria: white;
+}
+
+*{
+    margin: 0 auto;
+}
+
+body{
+    background-color:var(--cor-principal);
+}
+
+h{
+    font-size: 60px;
+    font-family: 'Poppins Light';
+    line-height: 80%;
+    position: relative;
+    top: 180px;
+    color: var(--cor-secundaria);
+    z-index: 3;
+    user-select: none;
+}
+
+#Title{
+    font-family: 'Poppins Bold';
+    font-size: 90px;
+}
+#subtitle{
+}
+
+button{
+    position: relative;
+    top: 200px;
+    outline: none;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    height: 50px;
+    width: 225px;
+    font-family: 'Poppins Medium';
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 4;
+    border: 2px solid var(--cor-secundaria);
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    user-select: none;
+}
+
+button:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
+@keyframes float{
+    from{transform: translateY(0px);}
+    to{transform:translateY(20px)}
+
+    50%{
+        box-shadow: rgb(255, 255, 255) 0px 0px 30px;
+    }
+}
+
+p {
+    font-family: 'Poppins Light';
+    color: var(--cor-secundaria);
+    position:fixed;
+    top: 95vh;
+    margin-left: 50px;
+}
+
+.content{
+    position: relative;
+    text-align: center;
+}

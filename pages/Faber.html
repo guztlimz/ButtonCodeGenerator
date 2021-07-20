@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/lowcode.css">
+    <title>Low code - Prototype</title>
+</head>
+<body>
+
+    <div class="valor">
+        <label>ELEMENTO:</label>
+        <select id="commandLine" class="form-control" onchange="verifyReq()">
+            <option value="Default" selected>Escolha...</option>
+            <option value="botão">Botão</option>
+            <option value="parágrafo">Parágrafo</option>
+        </select>
+    </div>
+
+    <div class="components">
+        <label>Id:</label>
+        <input id="vlrId" type="text" oninput="verifyReq()">
+
+        <label>Class:</label>
+        <input id="vlrClass" type="text" oninput="verifyReq()">
+
+        <label>Name:</label>
+        <input id="vlrName" type="text" oninput="verifyReq()">
+
+        <label>Value:</label>
+        <input id="vlrValue" type="text" oninput="verifyReq()">
+
+        <label>Element Content:</label>
+        <input id="vlrContent" type="text" oninput="verifyReq()">
+    </div>
+
+    <div class="resultGroup">
+        <div class="result">
+            <p>Código:</p>
+            <textarea readonly="true" id="resultImpresso"></textarea>
+        </div>
+    
+        <div class="displayResultado">
+            <p>Resultado:</p>
+            <p id="resultInterpretado" style="color: black;">Resultado apresentado aqui</p>
+        </div>
+    </div>
+    
+
+
+
+    <script src="../js/lowcode.js"></script>
+
+</body>
+</html>
