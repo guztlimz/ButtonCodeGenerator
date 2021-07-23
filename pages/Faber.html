@@ -9,46 +9,48 @@
 </head>
 <body>
 
-    <div class="valor">
-        <label>ELEMENTO:</label>
-        <select id="commandLine" class="form-control" onchange="verifyReq()">
-            <option value="Default" selected>Escolha...</option>
-            <option value="botão">Botão</option>
-            <option value="parágrafo">Parágrafo</option>
-        </select>
-    </div>
+    <!-- Box -->
+    <div class="displayInterpretado">
 
-    <div class="components">
-        <label>Id:</label>
-        <input id="vlrId" type="text" oninput="verifyReq()">
-
-        <label>Class:</label>
-        <input id="vlrClass" type="text" oninput="verifyReq()">
-
-        <label>Name:</label>
-        <input id="vlrName" type="text" oninput="verifyReq()">
-
-        <label>Value:</label>
-        <input id="vlrValue" type="text" oninput="verifyReq()">
-
-        <label>Element Content:</label>
-        <input id="vlrContent" type="text" oninput="verifyReq()">
-    </div>
-
-    <div class="resultGroup">
-        <div class="result">
-            <p>Código:</p>
-            <textarea readonly="true" id="resultImpresso"></textarea>
+        <!-- Navbar -->
+        <div class="squareTop">
+            <div class="backButton">
+                <a href="../index.html">Back</a>
+            </div>
         </div>
-    
-        <div class="displayResultado">
-            <p>Resultado:</p>
-            <p id="resultInterpretado" style="color: black;">Resultado apresentado aqui</p>
+
+        <!-- Conteúdo do Box -->
+        <div class="content">
+
+            <!-- Área do display de Resultado -->
+            <div class="displayCode">
+                <button id="buttonResult">Template</button>
+            </div>
+
+            <div class="config">
+                <div class="row">
+                    <label>Text:</label>
+                    <input type="text" id="vlrContent" oninput="codeGenerator()">
+                </div>
+                <div class="row">
+                    <label>ClassName:</label>
+                    <input type="text" id="vlrClass">
+                </div>
+                <div class="row color">
+                    <label >Background Color:</label>
+                    <label id="backColorValue">#000000</label>
+                    <input type="color" id="backColorPick" oninput="codeGenerator()">
+                </div>
+                <div class="row color">
+                    <label>Color:</label>
+                    <label id="colorValue">#000000</label>
+                    <input type="color" id="colorPick" oninput="codeGenerator()">
+                </div>
+            </div>
         </div>
+
+        
     </div>
-    
-
-
 
     <script src="../js/lowcode.js"></script>
 
