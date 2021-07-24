@@ -9,47 +9,100 @@
 </head>
 <body>
 
-    <!-- Box -->
-    <div class="displayInterpretado">
+    <div class="content">
 
-        <!-- Navbar -->
-        <div class="squareTop">
-            <div class="backButton">
-                <a href="../index.html">Back</a>
+
+        <!-- Box 1 - Display -->
+        <div class="display">
+
+            <!-- Navbar -->
+            <div class="squareTop">
+                <div class="backButton">
+                    <a href="../index.html">Back</a>
+                </div>
             </div>
+
+            <!-- Conteúdo do Box -->
+            <div class="buttonView">
+                <!-- Área do display de Resultado -->
+                <div class="displayCode">
+                    <button id="buttonResult">Template</button>
+                </div>
+
+                <!-- Códigos impressos -->
+                <div class="codeView">
+                    <p></p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Conteúdo do Box -->
-        <div class="content">
+        <!-- Box 2 - Settings -->
+        <div class="displayConfigs">
 
-            <!-- Área do display de Resultado -->
-            <div class="displayCode">
-                <button id="buttonResult">Template</button>
+            <!-- Navbar -->
+            <div class="squareTop">
+                <div class="titleTop">
+                    <p>Settings</p>
+                </div>
             </div>
 
-            <div class="config">
-                <div class="row">
-                    <label>Text:</label>
-                    <input type="text" id="vlrContent" oninput="codeGenerator()">
-                </div>
-                <div class="row">
-                    <label>ClassName:</label>
-                    <input type="text" id="vlrClass">
-                </div>
-                <div class="row color">
-                    <label >Background Color:</label>
-                    <label id="backColorValue">#000000</label>
-                    <input type="color" id="backColorPick" oninput="codeGenerator()">
-                </div>
-                <div class="row color">
-                    <label>Color:</label>
-                    <label id="colorValue">#000000</label>
-                    <input type="color" id="colorPick" oninput="codeGenerator()">
-                </div>
-            </div>
-        </div>
+            <!-- Conteúdo do Box -->
+            <div class="boxContent">
 
+                <div class="config">
+                    <div class="row">
+                        <label>Text:</label>
+                        <input type="text" id="vlrContent" value="Template" oninput="codeSettings()">
+                    </div>
+                    <div class="row color">
+                        <label >Background Color:</label>
+                        <label id="backColorValue">#ffffff</label>
+                        <input type="color" value="#ffffff" id="backColorPick" oninput="codeSettings()">
+                    </div>
+                    <div class="row color">
+                        <label>Color:</label>
+                        <label id="colorValue">#000000</label>
+                        <input type="color" value="#000000" id="colorPick" oninput="codeSettings()">
+                    </div>
+                    <div class="row">
+                        <label>Height:</label>
+                        <input type="number" id="vlrHeight" value="50" min="0" max="100" oninput="codeSettings()">
+                    </div>
+                    <div class="row">
+                        <label>width:</label>
+                        <input type="number" id="vlrWidth" value="150" min="0" max="200" oninput="codeSettings()">
+                    </div>
+                    <div class="row">
+                        <label>Border:</label>
+                        <input type="number" id="vlrBorder" value="0" oninput="codeSettings()">
+                    </div>
+                    <div class="row">
+                        <label>Border Style:</label>
+                        <select id="borderStyle" onclick="codeSettings()" style="width: 100px; background-color: rgb(223, 223, 223);">
+                            <option selected>Solid</option>
+                            <option>dotted</option>
+                            <option>dashed</option>
+                            <option>double</option>
+                            <option>groove</option>
+                            <option>ridge</option>
+                            <option>inset</option>
+                            <option>outset</option>
+                            <option>none</option>
+                            <option>hidden</option>
+                        </select>
+                    </div>
+                    <div class="row color">
+                        <label >Border Color:</label>
+                        <label id="borderColorValue">#000000</label>
+                        <input type="color" value="#000000" id="borderColorPick" oninput="codeSettings()">
+                    </div>
+                </div>
         
+            </div>
+
+    
+        </div>
     </div>
 
     <script src="../js/lowcode.js"></script>

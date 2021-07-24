@@ -61,6 +61,11 @@ body{
     background-color:var(--cor-principal);
 }
 
+.content{
+    position: relative;
+    text-align: center;
+}
+
 h{
     font-size: 60px;
     font-family: 'Poppins Light';
@@ -117,10 +122,19 @@ p {
     color: var(--cor-secundaria);
     position:fixed;
     top: 95vh;
-    margin-left: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.content{
-    position: relative;
-    text-align: center;
+@media (max-width: 450px)
+{
+
+    #Title{
+        font-family: 'Poppins Bold';
+        font-size: 60px;
+    }
+
+    h{
+        font-size: 30px
+    }
 }
