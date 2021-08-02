@@ -63,6 +63,7 @@ body{
 label, p{
     color: rgb(0, 0, 0);
     font-family: 'Poppins Medium';
+    user-select: none;
 }
 
 label, a{
@@ -75,6 +76,7 @@ input{
     background-color: rgb(223, 223, 223);
     color: rgb(0, 0, 0);
     outline: none;
+    user-select: none;
 }
 
 select, option{
@@ -111,9 +113,8 @@ textarea{
     background-color:rgb(0, 0, 0);
     height: 35px;
     width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
     display: flex;
+    overflow: hidden;
 }
 
 .backButton{
@@ -204,18 +205,88 @@ textarea{
 /* Visualização dos códigos */
 .codeView{
     text-align: start;
-    width: calc(100% - 15px);
+    width: 100%;
     height: 50%;
+    word-wrap: pre;
 }
 
-.codeView p{
-    margin: 0px;
-    position: relative;
-    top: 10px;
-    left: 10px;
-    font-family: monospace;
+/* Controladores das linguagens */
+.buttonsLanguage{
+    margin: 0;
+    display: flex;
+    background-color: transparent;
+    text-align: center;
     width: 100%;
+    height: 20px;
+    position: absolute;
+    z-index: 10;
+    margin-top: -20px;
+    background-color: #1c1f25;
+}
+.but{
+    cursor: pointer;
+    width: 50px;
+    height: 20px;
+    font-size: 12px;
+    align-items: center;
+    font-family: 'Poppins Medium';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.295);
+    transition: 0.5s;
+}
+
+.but:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+.but p{
+    position: relative;
+    top: -50%;
+    color: white;
+}
+
+.but.cssButton{
+    right: 0%;
+}
+.but.htmlButton{
+    right: 50px;
+}
+
+/* Html Display */
+.preCode{
+    height: 100%;
+    user-select: none;
+    margin: 0;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+
+#codeText{
     word-wrap: break-word;
+    margin-top: -15px;
+    user-select:text; 
+    height: inherit; 
+    padding: 0;
+}
+
+/* CSS Display */
+.preCodeCss{
+    height: 100%;
+    user-select: none;
+    margin: 0;
+    position: relative;
+    top: -100%;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+#codeTextCss{
+    word-wrap: break-word;
+    margin-top: -15px;
+    user-select:text; 
+    height: inherit; 
+    padding: 0;
 }
 
 /* Box 2 */

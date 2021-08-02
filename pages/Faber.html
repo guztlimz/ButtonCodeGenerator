@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/lowcode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css">
     <title>Low code - Prototype</title>
 </head>
-<body>
+<body onload="">
 
     <div class="content">
-
+        
 
         <!-- Box 1 - Display -->
         <div class="display">
@@ -18,7 +19,7 @@
             <!-- Navbar -->
             <div class="squareTop">
                 <div class="backButton">
-                    <a href="../index.html">Back</a>
+                    <a href="../index.html">Back to Home</a>
                 </div>
             </div>
 
@@ -31,7 +32,21 @@
 
                 <!-- Códigos impressos -->
                 <div class="codeView">
-                    <p></p>
+                    <div class="buttonsLanguage">
+                        <div class="but cssButton" id="cssButton" onclick="cssButton()">
+                            <p>CSS</p>
+                        </div>
+                        <div class="but htmlButton" id="htmlButton" onclick="htmlButton()">
+                            <p>HTML</p>
+                        </div>
+                        
+                    </div>
+                    <pre class="preCode" id="preCode">
+                        <code id="codeText" class="language-html"></code>
+                    </pre>
+                    <pre class="preCodeCss" id="preCodeCss">
+                        <code id="codeTextCss" class="language-css">css</code>
+                    </pre>
                 </div>
             </div>
 
@@ -53,33 +68,34 @@
                 <div class="config">
                     <div class="row">
                         <label>Text:</label>
-                        <input type="text" id="vlrContent" value="Template" oninput="codeSettings()">
+                        <input type="text" id="vlrContent" value="Template" oninput="callfunctions()">
                     </div>
                     <div class="row color">
                         <label >Background Color:</label>
                         <label id="backColorValue">#ffffff</label>
-                        <input type="color" value="#ffffff" id="backColorPick" oninput="codeSettings()">
+                        <input type="color" value="#ffffff" id="backColorPick" oninput="callfunctions()">
                     </div>
                     <div class="row color">
                         <label>Color:</label>
                         <label id="colorValue">#000000</label>
-                        <input type="color" value="#000000" id="colorPick" oninput="codeSettings()">
+                        <input type="color" value="#000000" id="colorPick" oninput="callfunctions()">
                     </div>
                     <div class="row">
                         <label>Height:</label>
-                        <input type="number" id="vlrHeight" value="50" min="0" max="100" oninput="codeSettings()">
+                        <input type="number" id="vlrHeight" value="50" min="0" max="100" oninput="callfunctions()">
                     </div>
                     <div class="row">
                         <label>width:</label>
-                        <input type="number" id="vlrWidth" value="150" min="0" max="200" oninput="codeSettings()">
+                        <input type="number" id="vlrWidth" value="150" min="0" max="200" oninput="callfunctions()">
                     </div>
                     <div class="row">
                         <label>Border:</label>
-                        <input type="number" id="vlrBorder" value="0" oninput="codeSettings()">
+                        <input type="number" id="vlrBorder" value="0" oninput="callfunctions()">
                     </div>
                     <div class="row">
                         <label>Border Style:</label>
-                        <select id="borderStyle" onclick="codeSettings()" style="width: 100px; background-color: rgb(223, 223, 223);">
+                        <select id="borderStyle" onclick="callfunctions()" style="width: 100px; background-color: rgb(223, 223, 223);">
+                            <option>none</option>
                             <option selected>Solid</option>
                             <option>dotted</option>
                             <option>dashed</option>
@@ -88,14 +104,13 @@
                             <option>ridge</option>
                             <option>inset</option>
                             <option>outset</option>
-                            <option>none</option>
                             <option>hidden</option>
                         </select>
                     </div>
                     <div class="row color">
                         <label >Border Color:</label>
                         <label id="borderColorValue">#000000</label>
-                        <input type="color" value="#000000" id="borderColorPick" oninput="codeSettings()">
+                        <input type="color" value="#000000" id="borderColorPick" oninput="callfunctions()">
                     </div>
                 </div>
         
@@ -106,6 +121,10 @@
     </div>
 
     <script src="../js/lowcode.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+    <script>
+    hljs.highlightAll();
+    </script>
 
 </body>
 </html>
